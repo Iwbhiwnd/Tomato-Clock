@@ -3,9 +3,9 @@
 A Python-based Pomodoro timer for Windows with terminal interface.
 
 # Installation
-
 ```bash
 pip install ft_tomato_clock
+```
 
 # Usage
 
@@ -19,6 +19,7 @@ tomato -f        # Start unlimited focus (Ctrl+C to exit)
 tomato -all      # Show all-time total stats
 tomato -clear    # Clear all log data
 tomato -h        # Show help
+```
 
 # Features
 🕒 Customizable work and break durations
