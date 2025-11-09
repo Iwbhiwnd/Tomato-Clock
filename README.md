@@ -2,12 +2,14 @@
 
 A Python-based Pomodoro timer for Windows with terminal interface.
 
-## Installation
+# Installation
 
 ```bash
 pip install ft_tomato_clock
-Usage
-bash
+
+# Usage
+
+```bash
 tomato           # Start 25-min focus + 5-min break
 tomato -t        # Start 25-min focus  
 tomato -t <n>    # Start <n>-min focus
@@ -17,7 +19,8 @@ tomato -f        # Start unlimited focus (Ctrl+C to exit)
 tomato -all      # Show all-time total stats
 tomato -clear    # Clear all log data
 tomato -h        # Show help
-Features
+
+# Features
 🕒 Customizable work and break durations
 
 📊 Progress tracking and statistics
@@ -30,7 +33,7 @@ Features
 
 💾 Persistent data storage
 
-Requirements
+# Requirements
 Python 3.6+
 
 Windows (optimized for Windows, but may work on other platforms)
