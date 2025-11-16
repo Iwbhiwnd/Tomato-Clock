@@ -30,20 +30,20 @@ def main():
 
     try:
         if len(sys.argv) <= 1:
-            print(f'🍅 Tomato {WORK_MINUTES} minutes. {RED}Ctrl+C to Exit{RESET}')
+            print(f'🍅 Tomato {WORK_MINUTES} minutes. {time.ctime()}. {RED}Ctrl+C to Exit{RESET}')
             tomato(WORK_MINUTES, 'Good job, time for break.', session_type="work")
             print(f'🧊 Break {BREAK_MINUTES} minutes. {RED}Ctrl+C to Exit{RESET}')
-            tomato(BREAK_MINUTES, 'Break ended.', session_type="break")
+            tomato(BREAK_MINUTES, 'It\'s time to work.', session_type="break")
 
         elif sys.argv[1] == '-t':
             minutes = int(sys.argv[2]) if len(sys.argv) > 2 else WORK_MINUTES
-            print(f'🍅 Tomato {minutes} minutes. {RED}Ctrl+C to Exit{RESET}')
+            print(f'🍅 Tomato {minutes} minutes. {time.ctime()}. {RED}Ctrl+C to Exit{RESET}')
             tomato(minutes, 'Good job, time for break.', session_type="work")
 
         elif sys.argv[1] == '-b':
             minutes = int(sys.argv[2]) if len(sys.argv) > 2 else BREAK_MINUTES
             print(f'🧊 Break {minutes} minutes. {RED}Ctrl+C to Exit{RESET}')
-            tomato(minutes, 'Break ended.', session_type="break")
+            tomato(minutes, 'It\'s time to work.', session_type="break")
 
         elif sys.argv[1] == '-f':
             focus_mode()
@@ -96,7 +96,7 @@ def tomato(minutes, notify_msg, session_type="work"):
 
 def focus_mode():
     start_time = time.perf_counter()
-    print(f'🍅 Unlimited Focus. {RED}Ctrl+C to Exit{RESET}')
+    print(f'🍅 Unlimited Focus. {time.ctime()}. {RED}Ctrl+C to Exit{RESET}')
     try:
         while True:
             diff_seconds = int(round(time.perf_counter() - start_time))
@@ -176,6 +176,7 @@ def log_duration_and_stats(seconds_to_add):
     print(f'This Session:  {session_minutes:.1f} min')
     print(f'Today Total:   {total_minutes_today:.1f} min')
     print(f'Equivalent to: {pomodoros_today:.1f} pomodoros 🍅')
+    print(f'{time.ctime()}')
 
 
 # --- 重构结束 ---

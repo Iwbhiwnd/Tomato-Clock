@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: ft_tomato_clock
-Version: 0.1.0
+Version: 0.1.1
 Summary: A simple Pomodoro timer for command line with stats tracking.
 Author-email: Iwbhiwnd <Iwbhiwnd@gmail.com>
 License: MIT License
